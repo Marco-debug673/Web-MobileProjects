@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register of money by yourself</title>
+    <link rel="stylesheet" href="/css/style4.css">
+</head>
+<body>
+    <div class="registermoney-container">
+        <form action="/registermoney" method="post">
+            <label for="name">Nombre(s):</label>
+            <input type="text" id="name" name="full name" required>
+
+            <label for="last name">Apellidos:</label>
+            <input type="text" id="last name" name="full last name" required>
+
+            <label for="money">Sueldo:</label>
+            <input type="money" id="salary" name="salary" required>
+
+            <div class="button-container">
+                <button type="submit"><a href="/html/index_menu.html">Regresar</a></button>
+                <button type="submit" value="Registrar">Guardar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

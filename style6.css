@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #8ad9f3, #78a8fb);
+}
+
+.register-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-top: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #171717;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #3f70f7;
+}
+
+input:focus + label, textarea:focus + label {
+    color: #3f70f7;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:first-child {
+    background: #ccc;
+    color: #333;
+}
+
+button:first-child:hover {
+    background: #bbb;
+}
+
+button:last-child {
+    background: #15adee;
+    color: white;
+}
+
+button:last-child:hover {
+    background: #2575fc;
+}
+
+@media (max-width: 500px) {
+    .register-container {
+        padding: 15px;
+    }
+
+    input, textarea {
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 80%;
+        margin: 10px 0;
+    }
+}

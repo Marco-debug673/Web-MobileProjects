@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #8ad9f3, #78a8fb);
+}
+
+.registerdamaged-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input[type="text"], input[type="file"], select, textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+}
+
+input[type="text"]:focus, input[type="file"]:focus, select:focus, textarea:focus {
+    border-bottom-color: #3f70f7;
+}
+
+input[type="text"]:focus + label, select:focus + label, textarea:focus + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #3f70f7;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background: #15adee;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background: #2575fc;
+}
+
+button[type="button"] {
+    background: #ccc;
+    color: #333;
+}
+
+button[type="button"]:hover {
+    background: #bbb;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .registerdamaged-container {
+        padding: 20px;
+    }
+
+    button[type="submit"], button[type="button"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .registerdamaged-container {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}

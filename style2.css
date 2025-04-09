@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1bc1f9, #2575fc);
+}
+
+.register-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    color: #333;
+    position: absolute;
+    transform: translateY(0);
+    left: 10px;
+}
+
+.input-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+input:focus, select:focus {
+    border-bottom-color: #3f70f7;
+}
+
+input:focus + label, select:focus + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #3f70f7;
+}
+
+input:focus, select:focus {
+    border-bottom-color: #3f70f7;
+}
+
+input:valid + label, select:valid + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #3f70f7;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:first-child {
+    background: #ccc;
+    color: #333;
+}
+
+button:first-child:hover {
+    background: #bbb;
+}
+
+button:last-child {
+    background: #15adee;
+    color: white;
+}
+
+button:last-child:hover {
+    background: #2575fc;
+}
+
+@media (max-width: 500px) {
+    .register-container {
+        padding: 15px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    input, select {
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}

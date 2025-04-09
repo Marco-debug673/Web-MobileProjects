@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register of payment by yourself</title>
+    <link rel="stylesheet" href="/css/style5.css">
+</head>
+<body>
+    <div class="registerpayment-container">
+        <form action="/registerpayment" method="post">
+            <label for="name">Nombre del Pago:</label>
+            <input type="name" id="name" name="name fo the payment" required>
+            <h1>Selecciona el pago:</h1>
+            <select id="options">
+                <option value="Selection">Seleccione una opción</option>
+                <option value="Luz">Luz</option>
+                <option value="Agua">Agua</option>
+                <option value="Predial">Predial</option>
+                <option value="Internet">Internet</option>
+                <option value="Comida">Comida</option>
+                <option value="Postre">Postre</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <label for="date">Fecha del Pago</label>
+            <input type="date" id="date" name="date of the payment" required>
+
+            <div class="button-container">
+                <button type="submit"><a href="/html/index_menu.html">Regresar</a></button>
+                <button type="submit" value="Registrar">Guardar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
