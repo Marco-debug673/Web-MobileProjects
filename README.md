@@ -1,2 +1,2 @@
 # Web-MobileProjects
-Este repositorio se tratará sobre proyectos de aplicaciones web y móviles de android
+Este repositorio se contendrá archivos de los proyectos de aplicaciones web y móviles de android
