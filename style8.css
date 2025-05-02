@@ -14,7 +14,7 @@ body {
     max-width: 1000px;
     margin: 20px;
     background: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px 6px rgba(222, 6, 251, 0.9);
     border-radius: 10px;
     overflow: hidden;
 }

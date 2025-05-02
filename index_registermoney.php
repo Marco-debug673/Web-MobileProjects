@@ -1,6 +1,6 @@
 <?php
-    include("controller_registermoney.php");
     include("connection_database.php");
+    include("controller_registermoney.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -26,7 +26,7 @@
             </select>
             <br>
             <label for="formFile" class="form-label">Evidencia</label>
-            <input class="form-control" type="file" id="formFile" name="evidencia">
+            <input class="form-control" type="file" id="formFile" name="evidencias">
             <br>
             <?php
                 $sql_edificio = "select id_edificio, nombre from edificio";

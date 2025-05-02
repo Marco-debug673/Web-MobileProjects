@@ -102,7 +102,7 @@ function confirmarEliminacionEvidencias() {
                 <tr>
                     <th>id_evidencia</th>
                     <th>Nombre</th>
-                    <th>Url</th>
+                    <th>Evidencia</th>
                     <th>Seleccionar</th>
                 </tr>
             </thead>
@@ -113,7 +113,23 @@ function confirmarEliminacionEvidencias() {
                         echo "<tr>";
                         echo "<td data-label='id_evidencia'>" . $row2["id_evidencia"] . "</td>";
                         echo "<td data-label='nombre'>" . htmlspecialchars($row2["nombre"], ENT_QUOTES, 'UTF-8') . "</td>";
-                        echo "<td data-label='url'>" . htmlspecialchars($row2["url"], ENT_QUOTES, 'UTF-8') . "</td>";
+                        echo "<td data-label='url'>";
+                        $archivo = htmlspecialchars($row2["url"], ENT_QUOTES, 'UTF-8');
+                        $extension = pathinfo($archivo, PATHINFO_EXTENSION);
+
+                        $ext_img = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'];
+                        $ext_document = ['pdf', 'docx', 'pptx', 'xlsx'];
+                        
+                        if (in_array($extension, $ext_img)) {
+                            echo "<img src='" . $archivo . "' alt='Evidencia' style='max-width: 100%; height: 300px; border: 1px solid #ccc; margin-bottom: 10px;'>";
+                        } elseif ($extension === 'pdf') {
+                            echo "<iframe src='" . $archivo . "' style='width: 100%; height: 300px; border: none;'></iframe>";
+                        } elseif (in_array($extension, $ext_document)) {
+                            echo "<p>Archivo de tipo <strong>." . $extension . "</strong>: <a href='" . $archivo . "' download>Descargar archivo</a></p>";
+                        } else {
+                            echo "<p>Tipo de archivo no soportado para visualización. <a href='" . $archivo . "' download>Descargar</a></p>";
+                        }                       
+                        echo "</td>";
                         echo '<td data-label="seleccionar" style="text-align: center;">
                             <input type="checkbox" name="eliminar_ids_evidencia[]" value="' . $row2["id_evidencia"] . '">
                             </td>';

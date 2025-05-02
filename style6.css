@@ -10,14 +10,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #8ad9f3, #78a8fb);
+    background: linear-gradient(135deg, #95ddf4, #a7c3f4);
 }
 
 .register-container {
-    background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px 6px rgba(22, 248, 6, 0.903);
     width: 90%;
     max-width: 500px;
     text-align: center;
@@ -26,11 +25,19 @@ body {
 form {
     display: flex;
     flex-direction: column;
+    background: white;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px 6px rgba(22, 248, 6, 0.903);
+    max-width: 500px;
+    margin: 40px auto;
 }
 
 h1 {
     font-size: 1.8rem;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .input-container {
@@ -40,7 +47,6 @@ h1 {
 }
 
 label {
-    display: block;
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
@@ -80,12 +86,15 @@ textarea {
 
 button {
     width: 48%;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    background-color: #3f70f7;
+    color: white;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 button:first-child {
