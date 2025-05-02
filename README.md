@@ -1,2 +1,2 @@
 # Web-MobileProjects
-Este repositorio se contendrá archivos de los proyectos de aplicaciones web y móviles de android
+Este repositorio se contendrá la estructura del proyecto de aplicación web sobre registro de daños y materiales
